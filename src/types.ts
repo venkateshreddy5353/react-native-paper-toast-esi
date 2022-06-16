@@ -39,6 +39,9 @@ export interface ToastProviderProps {
    * </ToastProvider>
    * ```
    */
+  type Props = {
+  children?: React.ReactNode
+};
   overrides?: ToastOptions;
 }
 
