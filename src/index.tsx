@@ -31,6 +31,8 @@ const reducer = (state: ToastParams, action: ToastAction) => {
     case ToastActionType.SHOW:
       return { ...state, ...action.payload };
 
+    case ToastActionType.HYDRATE:
+      return { ...state, ...action.payload, visibility: false };
 
     case ToastActionType.HIDE:
       return { ...state, visibility: false };
@@ -197,7 +199,7 @@ const common: ViewStyle = {
 const types: ToastStyles = {
   info: {
     ...common,
-    backgroundColor: 'rgba(39, 182, 204)',
+    backgroundColor: 'rgba(39, 182, 204,0.9)',
   },
   normal: {
     ...common,
@@ -224,4 +226,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { ToastProvider, useToast };
+export { ToastProvider, useToast, ToastOptions, ToastProviderProps };
