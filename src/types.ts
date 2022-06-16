@@ -1,4 +1,5 @@
 import type { ViewStyle, StyleProp } from 'react-native';
+import * as React from 'react';
 
 type ToastType = 'info' | 'normal' | 'success' | 'warning' | 'error';
 type ToastPosition = 'top' | 'bottom' | 'middle';
@@ -39,9 +40,8 @@ export interface ToastProviderProps {
    * </ToastProvider>
    * ```
    */
-  type Props = {
-  children?: React.ReactNode
-};
+ 
+  children?: React.ReactNode;
   overrides?: ToastOptions;
 }
 
