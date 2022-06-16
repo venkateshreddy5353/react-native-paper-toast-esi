@@ -13,9 +13,7 @@ import {
   ToastProviderProps,
   ToastStyles,
 } from './types';
-type Props = {
-  children?: React.ReactNode
-};
+
 const ToastContext = createContext<ToastMethods | null>(null);
 
 const defaults: ToastParams = {
